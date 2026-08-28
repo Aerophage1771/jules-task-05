@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LR Question Type Map — V3</title>
+<style>
+  :root {
+    --denim: #344E73;
+    --slate: #425C81;
+    --haze: #556E91;
+    --gold: #C9A149;
+    --ochre: #9F7633;
+    --petal: #7F501D;
+    --soft-white: #F8F9F9;
+    --canvas: #F7F8FA;
+    --deep-ink: #0A1625;
+    --body-ink: #26313F;
+    --line: #DDE3EA;
+    --paper: #FFFFFF;
+    --page-w: 10in;
+    --page-h: 8in;
+    --safe-x: 0.68in;
+    --safe-y: 0.56in;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #E8EDF2; color: var(--body-ink); font-family: "Inter", Helvetica, Arial, sans-serif; }
+  h1, h2, h3, h4 { color: var(--deep-ink); font-family: "Fraunces", Georgia, serif; margin:0;}
+  .eyebrow { color: var(--ochre); font: 700 9pt/1.2 "Outfit", "Inter", sans-serif; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px; }
+  .label { color: var(--denim); font: 700 8pt/1.2 "Outfit", "Inter", sans-serif; letter-spacing: .16em; text-transform: uppercase; display: block; margin-bottom: 0.08in; }
+  .gold-rule { width: 2.4in; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); margin: 0.22in 0 0.28in; }
+
+  .document { width: max-content; margin: 28px auto 56px; }
+  .pdf-page { position: relative; width: var(--page-w); height: var(--page-h); margin: 0 auto 24px; overflow: hidden; background: var(--paper); box-shadow: 0 14px 36px rgba(10,22,37,.15); break-after: page; page-break-after: always; }
+  .pdf-page.has-bloom::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(circle at 8% 92%, rgba(127,80,29,.16) 0%, rgba(159,118,51,.13) 14%, rgba(201,161,73,.11) 28%, rgba(85,110,145,.07) 43%, transparent 62%);
+  }
+  .pdf-page-content { position: absolute; inset: var(--safe-y) var(--safe-x) 0.68in; overflow: hidden; display: flex; flex-direction: column;}
+  .pdf-page-footer { position: absolute; left: var(--safe-x); right: var(--safe-x); bottom: 0.24in; display: flex; justify-content: space-between; align-items: center; padding-top: 0.09in; border-top: 1px solid var(--line); color: var(--haze); font-size: 9pt; }
+
+  /* Variant Specific Styles */
+
+    .v3-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; table-layout: fixed;}
+    .v3-table th { text-align: left; padding: 0.08in 0.1in; background: var(--denim); color: white; font: 700 8pt/1.2 "Outfit", sans-serif; letter-spacing: .1em; text-transform: uppercase; border-right:1px solid rgba(255,255,255,0.2);}
+    .v3-table td { padding: 0.1in; border-bottom: 1px solid var(--line); vertical-align: top; line-height: 1.4; }
+    .v3-table tr:nth-child(even) td { background: var(--canvas); }
+    .v3-table td h4 { font-size: 11pt; margin-bottom: 0.05in; color:var(--deep-ink);}
+    .v3-trap { color: var(--petal); font-weight: 500; }
+    .v3-trap-label { display: block; font: 700 7pt/1.2 "Outfit", sans-serif; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2px; }
+
+
+  @page { size: 10in 8in; margin: 0; }
+  @media print {
+    html, body { background: #fff !important; }
+    .pdf-page { box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="document">
+
+      <section class="pdf-page has-bloom">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Structure</span>
+            <h4>Main Conclusion</h4>
+          </td>
+          <td>Identify the final conclusion that the rest of the argument is built to support.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following most accurately expresses the main conclusion of the argument?"</span></td>
+          <td>Find the support chain. Ask 'Why?'. If another claim supports it, it's a conclusion. If it supports nothing else, it's the main conclusion. (The Why Test)</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Intermediate Conclusions. A claim that is supported by evidence but also goes on to support the final conclusion.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Structure</span>
+            <h4>Argument Part</h4>
+          </td>
+          <td>Describe the specific function a particular phrase or sentence serves in the argument.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The claim that X plays which one of the following roles in the argument?"</span></td>
+          <td>Ask: 'Does it support something?' and 'Is it supported by something?'. Focus on the structural function, not the subject matter.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Content vs. Function. Wrong answers often accurately describe the content but misidentify the role (e.g., calling evidence a conclusion).
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Patterns & Flaws</span>
+            <h4>Method of Reasoning</h4>
+          </td>
+          <td>Describe the logical technique or strategy the author uses to build their argument.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The argument proceeds by"</span></td>
+          <td>Abstract the argument into general terms. Identify the premises, conclusion, and how they relate. Match your abstraction to the answer choices.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Half-Right Answers. An answer might correctly describe one part of the argument but completely misrepresent another.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Patterns & Flaws</span>
+            <h4>Parallel Reasoning</h4>
+          </td>
+          <td>Find the answer choice that uses the exact same logical structure as the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following arguments is most similar in its reasoning to the argument above?"</span></td>
+          <td>Match the conclusion type (absolute vs. conditional), premise structure, and validity. Strip away the topic.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Same Topic, Different Logic. Wrong answers often use the exact same subject matter but completely different logical relationships.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>1</span>
+        </footer>
+      </section>
+
+      <section class="pdf-page ">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Patterns & Flaws</span>
+            <h4>Flaw</h4>
+          </td>
+          <td>Identify the specific reasoning error committed in the argument.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The reasoning in the argument is most vulnerable to criticism on the grounds that"</span></td>
+          <td>Play Devil's Advocate: Ask 'How could the evidence be perfectly true while the conclusion is still completely wrong?'</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Describing a Flaw Not Committed. The answer describes a real logical fallacy, but not the one that actually occurred in this argument.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Patterns & Flaws</span>
+            <h4>Parallel Flaw</h4>
+          </td>
+          <td>Find the answer choice that commits the exact same logical error as the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The flawed pattern of reasoning in the argument is most similar to that in which one of the following?"</span></td>
+          <td>Identify the specific flaw (e.g., conditional logic error, part-to-whole). Match only that specific structural error in the choices.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Matching Valid Logic. An answer choice that has the same conclusion type but is actually a valid argument.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Argument Impact & Assumptions</span>
+            <h4>Evaluate</h4>
+          </td>
+          <td>Identify the question or piece of information that would be most helpful in determining if the argument is strong.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following would it be most helpful to know in order to evaluate the argument?"</span></td>
+          <td>Use the Variance Test: Supply opposing extremes (e.g., Yes/No, 0%/100%). If one strengthens and the other weakens, it's the right answer.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Irrelevant Context. A question that might be interesting but whose answer doesn't change the validity of the conclusion.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Argument Impact & Assumptions</span>
+            <h4>Strengthen</h4>
+          </td>
+          <td>Find the new piece of information that makes the conclusion more likely to be true.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following, if true, most strengthens the argument?"</span></td>
+          <td>Identify the conclusion and the evidence. Find the gap. Look for an answer that patches the gap or blocks a potential counterattack.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Justifying a Premise. An answer that strengthens a premise that is already accepted as true, rather than strengthening the link to the conclusion.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>2</span>
+        </footer>
+      </section>
+
+      <section class="pdf-page ">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Argument Impact & Assumptions</span>
+            <h4>Weaken</h4>
+          </td>
+          <td>Find the new piece of information that makes the conclusion less likely to be true.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following, if true, most weakens the argument?"</span></td>
+          <td>Identify the core argument. Find the gap or assumption. Attack that gap with new evidence that shows why the conclusion doesn't have to follow.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Attacking a Premise. You cannot argue with the premises on the LSAT; you can only show they don't necessitate the conclusion.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Argument Impact & Assumptions</span>
+            <h4>Sufficient Assumption</h4>
+          </td>
+          <td>Find the missing premise that, if added, guarantees the conclusion is 100% true.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The conclusion follows logically if which one of the following is assumed?"</span></td>
+          <td>Look for Dangling Terms (a new concept in the conclusion). Find the Gap (Entry, Middle, End). Insert the answer and rerun the chain.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Necessary but not Sufficient. An assumption that must be true for the argument to work, but isn't enough on its own to prove the conclusion.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Argument Impact & Assumptions</span>
+            <h4>Necessary Assumption</h4>
+          </td>
+          <td>Find a premise that the argument requires or depends upon to work.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following is an assumption required by the argument?"</span></td>
+          <td>Use the Negation Test. Logically negate the answer choice. If the negated version destroys the argument, it is the correct necessary assumption.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Sufficient but not Necessary. An answer that would fix the argument perfectly, but goes too far (extreme language) and isn't strictly required.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Principles</span>
+            <h4>Principle Strengthen</h4>
+          </td>
+          <td>Find a broad rule that, if applied, helps justify the specific reasoning in the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following principles, if valid, most helps to justify the reasoning?"</span></td>
+          <td>Identify the specific leap made in the argument. Find a generalized rule that bridges that exact gap.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Rule is Too Narrow. A rule that applies to the specific topic but doesn't cover the logical jump made.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>3</span>
+        </footer>
+      </section>
+
+      <section class="pdf-page ">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Principles</span>
+            <h4>Principle Generalize</h4>
+          </td>
+          <td>Extract the underlying general rule from a specific scenario or argument.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following generalizations is most clearly illustrated by the situation described?"</span></td>
+          <td>Summarize the lesson or moral of the story. Strip away the specific characters and items.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Overly Specific Rules. Answers that retain too many details from the original stimulus rather than generalizing.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Principles</span>
+            <h4>Principle Apply</h4>
+          </td>
+          <td>Take a broad rule and apply it to a new specific situation to see which one fits.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following judgments most closely conforms to the principle stated above?"</span></td>
+          <td>Convert the rule into a strict checklist (sufficient/necessary conditions). One missed necessary condition can eliminate an answer.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Reversed Logic. An answer that affirms the consequent or denies the antecedent of the given principle.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Inference</span>
+            <h4>Most Strongly Supported</h4>
+          </td>
+          <td>Find the statement that is best proven by the combination of facts in the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following is most strongly supported by the information above?"</span></td>
+          <td>Combine facts. Look for overlaps. The correct answer doesn't have to be 100% proven, but it should be very close based only on the text.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Real-World Truths. Statements that are true in the real world but not supported by the specific text provided.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Inference</span>
+            <h4>Fill in the Blank</h4>
+          </td>
+          <td>Complete the logical thought at the end of the stimulus, usually a conclusion.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following most logically completes the argument?"</span></td>
+          <td>Treat it like a Must Be True or Main Conclusion question depending on the preceding context. Synthesize what was just said.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             New Directions. An answer that brings up a new, albeit related, point rather than concluding the current line of thought.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>4</span>
+        </footer>
+      </section>
+
+      <section class="pdf-page ">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Inference</span>
+            <h4>Must Be True</h4>
+          </td>
+          <td>Find the statement that is 100% guaranteed by the facts in the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"If the statements above are true, which one of the following must also be true?"</span></td>
+          <td>Ask: 'Could this possibly be false without contradicting the stimulus?'. Combine absolute statements and conditional chains.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Exaggeration. Words like 'all', 'never', 'must', when the stimulus only supported 'some', 'rarely', 'might'.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Inference</span>
+            <h4>Must Be False</h4>
+          </td>
+          <td>Find the statement that completely contradicts the facts in the stimulus.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"If the statements above are true, which one of the following must be false?"</span></td>
+          <td>Use the Coexistence Test. Can this statement and the stimulus both be true at the same time? If no, it's the answer.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Could Be False. Statements that might not be true, but aren't strictly proven false by the stimulus.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Paradox / Explain</span>
+            <h4>Paradox / Explain</h4>
+          </td>
+          <td>Find the piece of information that resolves a seeming contradiction between two facts.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"Which one of the following, if true, most helps to resolve the apparent discrepancy?"</span></td>
+          <td>Identify both surprising facts. Preserve both facts as true. Find the hidden distinction, bridge, or alternate cause that allows both to coexist.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Explaining Only One Side. An answer that explains why one fact is true, but makes the other fact even more confusing.
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Dialogue</span>
+            <h4>Disagree</h4>
+          </td>
+          <td>Identify the exact point of contention between two speakers.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The dialogue provides the most support for the claim that X and Y disagree over whether"</span></td>
+          <td>Speaker-by-Speaker Commitment Test. Would Speaker A say 'Yes' or 'No'? Would Speaker B say the opposite? If one speaker has no opinion, it's wrong.</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Agreeing to Disagree. An issue that both speakers mention, but actually agree on, even if they disagree on the broader conclusion.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>5</span>
+        </footer>
+      </section>
+
+      <section class="pdf-page ">
+        <div class="pdf-page-content">
+          <p class="eyebrow">Level 3A — Trap Map (Variant 3) · Matrix Reference</p>
+          <div style="flex:1; margin-top:0.2in;">
+            <table class="v3-table">
+              <thead>
+                <tr>
+                  <th style="width: 20%;">Type</th>
+                  <th style="width: 25%;">Task & Stem</th>
+                  <th style="width: 30%;">Method</th>
+                  <th style="width: 25%;">Trap</th>
+                </tr>
+              </thead>
+              <tbody>
+
+        <tr>
+          <td>
+            <span class="eyebrow" style="font-size:7pt; margin-bottom:2px; color:var(--haze);">Dialogue</span>
+            <h4>Agree</h4>
+          </td>
+          <td>Identify a statement that both speakers are committed to believing.<br/><span style="color:var(--haze); font-style:italic; display:inline-block; margin-top:4px;">"The dialogue provides the most support for the claim that X and Y agree that"</span></td>
+          <td>Speaker-by-Speaker Commitment Test. Would Speaker A say 'Yes'? Would Speaker B also say 'Yes'?</td>
+          <td class="v3-trap">
+             <span class="v3-trap-label">The #1 Trap</span>
+             Unstated Opinions. A statement that one speaker clearly agrees with, but the other speaker's stance is completely unknown.
+          </td>
+        </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <footer class="pdf-page-footer">
+          <span>Sunlit Botanical Editorial · V3 Dense Matrix</span>
+          <span>6</span>
+        </footer>
+      </section>
+
+</main>
+</body>
+</html>

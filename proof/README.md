@@ -1,0 +1,30 @@
+# Proof of Render
+
+| Variant | Page | Screenshot |
+| --- | --- | --- |
+| variant-1.html | 1 | ![](variant-1-page-1.png) |
+| variant-1.html | 2 | ![](variant-1-page-2.png) |
+| variant-1.html | 3 | ![](variant-1-page-3.png) |
+| variant-1.html | 4 | ![](variant-1-page-4.png) |
+| variant-1.html | 5 | ![](variant-1-page-5.png) |
+| variant-1.html | 6 | ![](variant-1-page-6.png) |
+| variant-1.html | 7 | ![](variant-1-page-7.png) |
+| variant-1.html | 8 | ![](variant-1-page-8.png) |
+| variant-1.html | 9 | ![](variant-1-page-9.png) |
+| variant-1.html | 10 | ![](variant-1-page-10.png) |
+| variant-2.html | 1 | ![](variant-2-page-1.png) |
+| variant-2.html | 2 | ![](variant-2-page-2.png) |
+| variant-2.html | 3 | ![](variant-2-page-3.png) |
+| variant-2.html | 4 | ![](variant-2-page-4.png) |
+| variant-2.html | 5 | ![](variant-2-page-5.png) |
+| variant-2.html | 6 | ![](variant-2-page-6.png) |
+| variant-2.html | 7 | ![](variant-2-page-7.png) |
+| variant-2.html | 8 | ![](variant-2-page-8.png) |
+| variant-2.html | 9 | ![](variant-2-page-9.png) |
+| variant-2.html | 10 | ![](variant-2-page-10.png) |
+| variant-3.html | 1 | ![](variant-3-page-1.png) |
+| variant-3.html | 2 | ![](variant-3-page-2.png) |
+| variant-3.html | 3 | ![](variant-3-page-3.png) |
+| variant-3.html | 4 | ![](variant-3-page-4.png) |
+| variant-3.html | 5 | ![](variant-3-page-5.png) |
+| variant-3.html | 6 | ![](variant-3-page-6.png) |

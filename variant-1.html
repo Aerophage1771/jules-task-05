@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LR Question Type Map — V1</title>
+<style>
+  :root {
+    --denim: #344E73;
+    --slate: #425C81;
+    --haze: #556E91;
+    --gold: #C9A149;
+    --ochre: #9F7633;
+    --petal: #7F501D;
+    --soft-white: #F8F9F9;
+    --canvas: #F7F8FA;
+    --deep-ink: #0A1625;
+    --body-ink: #26313F;
+    --line: #DDE3EA;
+    --paper: #FFFFFF;
+    --page-w: 10in;
+    --page-h: 8in;
+    --safe-x: 0.68in;
+    --safe-y: 0.56in;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #E8EDF2; color: var(--body-ink); font-family: "Inter", Helvetica, Arial, sans-serif; }
+  h1, h2, h3, h4 { color: var(--deep-ink); font-family: "Fraunces", Georgia, serif; margin:0;}
+  .eyebrow { color: var(--ochre); font: 700 9pt/1.2 "Outfit", "Inter", sans-serif; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 10px; }
+  .label { color: var(--denim); font: 700 8pt/1.2 "Outfit", "Inter", sans-serif; letter-spacing: .16em; text-transform: uppercase; display: block; margin-bottom: 0.08in; }
+  .gold-rule { width: 2.4in; height: 3px; background: linear-gradient(90deg, var(--gold), transparent); margin: 0.22in 0 0.28in; }
+
+  .document { width: max-content; margin: 28px auto 56px; }
+  .pdf-page { position: relative; width: var(--page-w); height: var(--page-h); margin: 0 auto 24px; overflow: hidden; background: var(--paper); box-shadow: 0 14px 36px rgba(10,22,37,.15); break-after: page; page-break-after: always; }
+  .pdf-page.has-bloom::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(circle at 8% 92%, rgba(127,80,29,.16) 0%, rgba(159,118,51,.13) 14%, rgba(201,161,73,.11) 28%, rgba(85,110,145,.07) 43%, transparent 62%);
+  }
+  .pdf-page-content { position: absolute; inset: var(--safe-y) var(--safe-x) 0.68in; overflow: hidden; display: flex; flex-direction: column;}
+  .pdf-page-footer { position: absolute; left: var(--safe-x); right: var(--safe-x); bottom: 0.24in; display: flex; justify-content: space-between; align-items: center; padding-top: 0.09in; border-top: 1px solid var(--line); color: var(--haze); font-size: 9pt; }
+
+  /* Variant Specific Styles */
+
+    .v1-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.18in; flex: 1; min-height:0; }
+    .v1-col { display: flex; flex-direction: column; gap: 0.18in; }
+    .v1-card { padding: 0.15in; border: 1px solid var(--line); border-radius: 12px; background: var(--canvas); }
+    .v1-card h4 { font-size: 13pt; margin-bottom: 0.08in; color: var(--denim);}
+    .v1-card p { font-size: 9pt; line-height: 1.4; margin: 0 0 0.08in; }
+    .v1-card .trap-box { border-top: 1px solid var(--gold); padding-top: 0.08in; margin-top: 0.08in; background: var(--soft-white); padding:0.1in; border-radius: 6px;}
+    .v1-card .trap-box .label { color: var(--petal); margin-bottom: 0.04in; }
+
+
+  @page { size: 10in 8in; margin: 0; }
+  @media print {
+    html, body { background: #fff !important; }
+    .pdf-page { box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main class="document">
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Structure</p>
+            <h1>Structure</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Main Conclusion</h4>
+              <p><strong>Task:</strong> Identify the final conclusion that the rest of the argument is built to support.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following most accurately expresses the main conclusion of the argument?"</em></p>
+              <p><strong>Method:</strong> Find the support chain. Ask 'Why?'. If another claim supports it, it's a conclusion. If it supports nothing else, it's the main conclusion. (The Why Test)</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Intermediate Conclusions. A claim that is supported by evidence but also goes on to support the final conclusion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Argument Part</h4>
+              <p><strong>Task:</strong> Describe the specific function a particular phrase or sentence serves in the argument.</p>
+              <p><strong>Stem:</strong> <em>"The claim that X plays which one of the following roles in the argument?"</em></p>
+              <p><strong>Method:</strong> Ask: 'Does it support something?' and 'Is it supported by something?'. Focus on the structural function, not the subject matter.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Content vs. Function. Wrong answers often accurately describe the content but misidentify the role (e.g., calling evidence a conclusion).</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>1</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Patterns & Flaws</p>
+            <h1>Patterns & Flaws</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Method of Reasoning</h4>
+              <p><strong>Task:</strong> Describe the logical technique or strategy the author uses to build their argument.</p>
+              <p><strong>Stem:</strong> <em>"The argument proceeds by"</em></p>
+              <p><strong>Method:</strong> Abstract the argument into general terms. Identify the premises, conclusion, and how they relate. Match your abstraction to the answer choices.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Half-Right Answers. An answer might correctly describe one part of the argument but completely misrepresent another.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Parallel Reasoning</h4>
+              <p><strong>Task:</strong> Find the answer choice that uses the exact same logical structure as the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following arguments is most similar in its reasoning to the argument above?"</em></p>
+              <p><strong>Method:</strong> Match the conclusion type (absolute vs. conditional), premise structure, and validity. Strip away the topic.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Same Topic, Different Logic. Wrong answers often use the exact same subject matter but completely different logical relationships.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Flaw</h4>
+              <p><strong>Task:</strong> Identify the specific reasoning error committed in the argument.</p>
+              <p><strong>Stem:</strong> <em>"The reasoning in the argument is most vulnerable to criticism on the grounds that"</em></p>
+              <p><strong>Method:</strong> Play Devil's Advocate: Ask 'How could the evidence be perfectly true while the conclusion is still completely wrong?'</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Describing a Flaw Not Committed. The answer describes a real logical fallacy, but not the one that actually occurred in this argument.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>2</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page ">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Patterns & Flaws</p>
+            <h1>Patterns & Flaws</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Parallel Flaw</h4>
+              <p><strong>Task:</strong> Find the answer choice that commits the exact same logical error as the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"The flawed pattern of reasoning in the argument is most similar to that in which one of the following?"</em></p>
+              <p><strong>Method:</strong> Identify the specific flaw (e.g., conditional logic error, part-to-whole). Match only that specific structural error in the choices.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Matching Valid Logic. An answer choice that has the same conclusion type but is actually a valid argument.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>3</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Argument Impact & Assumptions</p>
+            <h1>Argument Impact & Assumptions</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Evaluate</h4>
+              <p><strong>Task:</strong> Identify the question or piece of information that would be most helpful in determining if the argument is strong.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following would it be most helpful to know in order to evaluate the argument?"</em></p>
+              <p><strong>Method:</strong> Use the Variance Test: Supply opposing extremes (e.g., Yes/No, 0%/100%). If one strengthens and the other weakens, it's the right answer.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Irrelevant Context. A question that might be interesting but whose answer doesn't change the validity of the conclusion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Strengthen</h4>
+              <p><strong>Task:</strong> Find the new piece of information that makes the conclusion more likely to be true.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following, if true, most strengthens the argument?"</em></p>
+              <p><strong>Method:</strong> Identify the conclusion and the evidence. Find the gap. Look for an answer that patches the gap or blocks a potential counterattack.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Justifying a Premise. An answer that strengthens a premise that is already accepted as true, rather than strengthening the link to the conclusion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Weaken</h4>
+              <p><strong>Task:</strong> Find the new piece of information that makes the conclusion less likely to be true.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following, if true, most weakens the argument?"</em></p>
+              <p><strong>Method:</strong> Identify the core argument. Find the gap or assumption. Attack that gap with new evidence that shows why the conclusion doesn't have to follow.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Attacking a Premise. You cannot argue with the premises on the LSAT; you can only show they don't necessitate the conclusion.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>4</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page ">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Argument Impact & Assumptions</p>
+            <h1>Argument Impact & Assumptions</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Sufficient Assumption</h4>
+              <p><strong>Task:</strong> Find the missing premise that, if added, guarantees the conclusion is 100% true.</p>
+              <p><strong>Stem:</strong> <em>"The conclusion follows logically if which one of the following is assumed?"</em></p>
+              <p><strong>Method:</strong> Look for Dangling Terms (a new concept in the conclusion). Find the Gap (Entry, Middle, End). Insert the answer and rerun the chain.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Necessary but not Sufficient. An assumption that must be true for the argument to work, but isn't enough on its own to prove the conclusion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Necessary Assumption</h4>
+              <p><strong>Task:</strong> Find a premise that the argument requires or depends upon to work.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following is an assumption required by the argument?"</em></p>
+              <p><strong>Method:</strong> Use the Negation Test. Logically negate the answer choice. If the negated version destroys the argument, it is the correct necessary assumption.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Sufficient but not Necessary. An answer that would fix the argument perfectly, but goes too far (extreme language) and isn't strictly required.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>5</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Principles</p>
+            <h1>Principles</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Principle Strengthen</h4>
+              <p><strong>Task:</strong> Find a broad rule that, if applied, helps justify the specific reasoning in the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following principles, if valid, most helps to justify the reasoning?"</em></p>
+              <p><strong>Method:</strong> Identify the specific leap made in the argument. Find a generalized rule that bridges that exact gap.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Rule is Too Narrow. A rule that applies to the specific topic but doesn't cover the logical jump made.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Principle Generalize</h4>
+              <p><strong>Task:</strong> Extract the underlying general rule from a specific scenario or argument.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following generalizations is most clearly illustrated by the situation described?"</em></p>
+              <p><strong>Method:</strong> Summarize the lesson or moral of the story. Strip away the specific characters and items.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Overly Specific Rules. Answers that retain too many details from the original stimulus rather than generalizing.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Principle Apply</h4>
+              <p><strong>Task:</strong> Take a broad rule and apply it to a new specific situation to see which one fits.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following judgments most closely conforms to the principle stated above?"</em></p>
+              <p><strong>Method:</strong> Convert the rule into a strict checklist (sufficient/necessary conditions). One missed necessary condition can eliminate an answer.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Reversed Logic. An answer that affirms the consequent or denies the antecedent of the given principle.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>6</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Inference</p>
+            <h1>Inference</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Most Strongly Supported</h4>
+              <p><strong>Task:</strong> Find the statement that is best proven by the combination of facts in the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following is most strongly supported by the information above?"</em></p>
+              <p><strong>Method:</strong> Combine facts. Look for overlaps. The correct answer doesn't have to be 100% proven, but it should be very close based only on the text.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Real-World Truths. Statements that are true in the real world but not supported by the specific text provided.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Fill in the Blank</h4>
+              <p><strong>Task:</strong> Complete the logical thought at the end of the stimulus, usually a conclusion.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following most logically completes the argument?"</em></p>
+              <p><strong>Method:</strong> Treat it like a Must Be True or Main Conclusion question depending on the preceding context. Synthesize what was just said.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>New Directions. An answer that brings up a new, albeit related, point rather than concluding the current line of thought.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Must Be True</h4>
+              <p><strong>Task:</strong> Find the statement that is 100% guaranteed by the facts in the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"If the statements above are true, which one of the following must also be true?"</em></p>
+              <p><strong>Method:</strong> Ask: 'Could this possibly be false without contradicting the stimulus?'. Combine absolute statements and conditional chains.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Exaggeration. Words like 'all', 'never', 'must', when the stimulus only supported 'some', 'rarely', 'might'.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>7</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page ">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Inference</p>
+            <h1>Inference</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Must Be False</h4>
+              <p><strong>Task:</strong> Find the statement that completely contradicts the facts in the stimulus.</p>
+              <p><strong>Stem:</strong> <em>"If the statements above are true, which one of the following must be false?"</em></p>
+              <p><strong>Method:</strong> Use the Coexistence Test. Can this statement and the stimulus both be true at the same time? If no, it's the answer.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Could Be False. Statements that might not be true, but aren't strictly proven false by the stimulus.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>8</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Paradox / Explain</p>
+            <h1>Paradox / Explain</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Paradox / Explain</h4>
+              <p><strong>Task:</strong> Find the piece of information that resolves a seeming contradiction between two facts.</p>
+              <p><strong>Stem:</strong> <em>"Which one of the following, if true, most helps to resolve the apparent discrepancy?"</em></p>
+              <p><strong>Method:</strong> Identify both surprising facts. Preserve both facts as true. Find the hidden distinction, bridge, or alternate cause that allows both to coexist.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Explaining Only One Side. An answer that explains why one fact is true, but makes the other fact even more confusing.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>9</span>
+          </footer>
+        </section>
+
+        <section class="pdf-page has-bloom">
+          <div class="pdf-page-content">
+            <p class="eyebrow">Level 3A — Trap Map (Variant 1) · Family Dialogue</p>
+            <h1>Dialogue</h1>
+            <div class="gold-rule"></div>
+            <div class="v1-grid">
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Disagree</h4>
+              <p><strong>Task:</strong> Identify the exact point of contention between two speakers.</p>
+              <p><strong>Stem:</strong> <em>"The dialogue provides the most support for the claim that X and Y disagree over whether"</em></p>
+              <p><strong>Method:</strong> Speaker-by-Speaker Commitment Test. Would Speaker A say 'Yes' or 'No'? Would Speaker B say the opposite? If one speaker has no opinion, it's wrong.</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Agreeing to Disagree. An issue that both speakers mention, but actually agree on, even if they disagree on the broader conclusion.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="v1-col">
+            <article class="v1-card">
+              <span class="label">Question Type</span>
+              <h4>Agree</h4>
+              <p><strong>Task:</strong> Identify a statement that both speakers are committed to believing.</p>
+              <p><strong>Stem:</strong> <em>"The dialogue provides the most support for the claim that X and Y agree that"</em></p>
+              <p><strong>Method:</strong> Speaker-by-Speaker Commitment Test. Would Speaker A say 'Yes'? Would Speaker B also say 'Yes'?</p>
+              <div class="trap-box">
+                <span class="label">The #1 Trap</span>
+                <p>Unstated Opinions. A statement that one speaker clearly agrees with, but the other speaker's stance is completely unknown.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+          </div>
+          <footer class="pdf-page-footer">
+            <span>Sunlit Botanical Editorial · V1 Column Cards</span>
+            <span>10</span>
+          </footer>
+        </section>
+
+</main>
+</body>
+</html>
